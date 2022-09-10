@@ -990,31 +990,46 @@ create_winMain (void)
   gtk_widget_show (colorBlack);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorBlack);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (colorBlack), TRUE);
+  gtk_widget_add_accelerator (colorBlack, "activate", accel_group,
+                              GDK_K, (GdkModifierType) GDK_SUPER_MASK | GDK_SHIFT_MASK,
+                              GTK_ACCEL_VISIBLE);
 
   colorBlue = gtk_radio_menu_item_new_with_mnemonic (colorBlack_group, _("_blue"));
   colorBlack_group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (colorBlue));
   gtk_widget_show (colorBlue);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorBlue);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (colorBlue), TRUE);
-
+  gtk_widget_add_accelerator (colorBlue, "activate", accel_group,
+                              GDK_B, (GdkModifierType) GDK_SUPER_MASK | GDK_SHIFT_MASK,
+                              GTK_ACCEL_VISIBLE);
+  
   colorRed = gtk_radio_menu_item_new_with_mnemonic (colorBlack_group, _("_red"));
   colorBlack_group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (colorRed));
   gtk_widget_show (colorRed);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorRed);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (colorRed), TRUE);
-
+  gtk_widget_add_accelerator (colorRed, "activate", accel_group,
+                              GDK_R, (GdkModifierType) GDK_SUPER_MASK | GDK_SHIFT_MASK,
+                              GTK_ACCEL_VISIBLE);
+  
   colorGreen = gtk_radio_menu_item_new_with_mnemonic (colorBlack_group, _("_green"));
   colorBlack_group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (colorGreen));
   gtk_widget_show (colorGreen);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorGreen);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (colorGreen), TRUE);
-
+  gtk_widget_add_accelerator (colorGreen, "activate", accel_group,
+                              GDK_G, (GdkModifierType) GDK_SUPER_MASK | GDK_SHIFT_MASK,
+                              GTK_ACCEL_VISIBLE);
+  
   colorGray = gtk_radio_menu_item_new_with_mnemonic (colorBlack_group, _("gr_ay"));
   colorBlack_group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (colorGray));
   gtk_widget_show (colorGray);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorGray);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (colorGray), TRUE);
-
+  gtk_widget_add_accelerator (colorGray, "activate", accel_group,
+                              GDK_A, (GdkModifierType) GDK_SUPER_MASK | GDK_SHIFT_MASK,
+                              GTK_ACCEL_VISIBLE);
+  
   separator17 = gtk_separator_menu_item_new ();
   gtk_widget_show (separator17);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), separator17);
@@ -1025,37 +1040,55 @@ create_winMain (void)
   gtk_widget_show (colorLightBlue);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorLightBlue);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (colorLightBlue), TRUE);
+  gtk_widget_add_accelerator (colorLightBlue, "activate", accel_group,
+                              GDK_U, (GdkModifierType) GDK_SUPER_MASK | GDK_SHIFT_MASK,
+                              GTK_ACCEL_VISIBLE);
 
   colorLightGreen = gtk_radio_menu_item_new_with_mnemonic (colorBlack_group, _("light gr_een"));
   colorBlack_group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (colorLightGreen));
   gtk_widget_show (colorLightGreen);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorLightGreen);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (colorLightGreen), TRUE);
-
+  gtk_widget_add_accelerator (colorLightGreen, "activate", accel_group,
+                              GDK_N, (GdkModifierType) GDK_SUPER_MASK | GDK_SHIFT_MASK,
+                              GTK_ACCEL_VISIBLE);
+  
   colorMagenta = gtk_radio_menu_item_new_with_mnemonic (colorBlack_group, _("_magenta"));
   colorBlack_group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (colorMagenta));
   gtk_widget_show (colorMagenta);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorMagenta);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (colorMagenta), TRUE);
-
+  gtk_widget_add_accelerator (colorMagenta, "activate", accel_group,
+                              GDK_M, (GdkModifierType) GDK_SUPER_MASK | GDK_SHIFT_MASK,
+                              GTK_ACCEL_VISIBLE);
+  
   colorOrange = gtk_radio_menu_item_new_with_mnemonic (colorBlack_group, _("_orange"));
   colorBlack_group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (colorOrange));
   gtk_widget_show (colorOrange);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorOrange);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (colorOrange), TRUE);
-
+  gtk_widget_add_accelerator (colorOrange, "activate", accel_group,
+                              GDK_O, (GdkModifierType) GDK_SUPER_MASK | GDK_SHIFT_MASK,
+                              GTK_ACCEL_VISIBLE);
+  
   colorYellow = gtk_radio_menu_item_new_with_mnemonic (colorBlack_group, _("_yellow"));
   colorBlack_group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (colorYellow));
   gtk_widget_show (colorYellow);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorYellow);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (colorYellow), TRUE);
-
+  gtk_widget_add_accelerator (colorYellow, "activate", accel_group,
+                              GDK_Y, (GdkModifierType) GDK_SUPER_MASK | GDK_SHIFT_MASK,
+                              GTK_ACCEL_VISIBLE);
+  
   colorWhite = gtk_radio_menu_item_new_with_mnemonic (colorBlack_group, _("_white"));
   colorBlack_group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (colorWhite));
   gtk_widget_show (colorWhite);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorWhite);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (colorWhite), TRUE);
-
+  gtk_widget_add_accelerator (colorWhite, "activate", accel_group,
+                              GDK_W, (GdkModifierType) GDK_SUPER_MASK | GDK_SHIFT_MASK,
+                              GTK_ACCEL_VISIBLE);
+  
   colorOther = gtk_menu_item_new_with_mnemonic (_("other..."));
   gtk_widget_show (colorOther);
   gtk_container_add (GTK_CONTAINER (toolsColor_menu), colorOther);
